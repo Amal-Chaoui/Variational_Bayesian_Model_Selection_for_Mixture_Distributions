@@ -6,6 +6,9 @@ Review of the paper "*Variational Bayesian Model Selection for Mixture Distribut
 
 [![Generic badge](https://img.shields.io/badge/Github-page-green.svg)](https://github.com/Amal-Chaoui)
 [![Generic badge](https://img.shields.io/badge/Code-here-orange.svg)](https://github.com/Amal-Chaoui/Variational_Bayesian_Model_Selection_for_Mixture_Distributions/tree/main/experiments)
+[![Generic badge](https://img.shields.io/badge/Paper-link-blue.svg)](
+https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/bishop-aistats01.pdf)
+
 
  
 
