@@ -26,8 +26,7 @@ class VariationalGaussianMixture():
         self.invV0 = invV0          # inverse of the initial scale matrix 
 
 
-
-    # ------------ initialize_parameters ------------ 
+ 
     def initialize_parameters(self, X):
         """initializes the parameters of the model : 
             - nu0 : deg. of freedom of the Wishart dist.
@@ -68,8 +67,7 @@ class VariationalGaussianMixture():
         self.update_parameters(X, exp_sin, exp_T, exp_log_det_T, exp_mu, exp_mu_muT)
 
     
-
-    # ------------ update_parameters ------------     
+     
     def update_parameters(self, X, exp_sin, exp_T, exp_log_det_T, exp_mu, exp_mu_muT):
 
         """ updates the parameters using computed expectations
@@ -110,8 +108,7 @@ class VariationalGaussianMixture():
             self.invV[k] = self.invV0 + second_term  
 
 
-
-    # ------------ compute_expectations ------------ 
+            
     def compute_expectations(self, D):
         """computing expectation of the model's parameters
 
@@ -140,8 +137,7 @@ class VariationalGaussianMixture():
         return exp_T, exp_log_det_T, exp_mu, exp_mu_muT, exp_muT_mu 
 
 
-
-    # ------------ compute_exp_sin ------------ 
+ 
     def compute_exp_sin(self, X, exp_T, exp_log_det_T, exp_mu, exp_mu_muT, exp_muT_mu):
         """ computes the expectation of s_in 
 
@@ -179,7 +175,8 @@ class VariationalGaussianMixture():
         return log_exp_sin, log_p_hat
 
 
-    # ------------ compute_lower_bound ------------ 
+
+    
     def compute_lower_bound(self, X, log_exp_sin, exp_sin, log_p_hat, exp_T, exp_log_det_T, exp_mu, exp_mu_muT, exp_muT_mu):
         """computes the lower bound of the marginal log-likelihood
 
@@ -222,7 +219,8 @@ class VariationalGaussianMixture():
         return ln_p_x + ln_p_z + ln_p_mu + ln_p_T - ln_q_z - ln_q_mu - ln_q_T
 
 
-    # ------------ display_figure ------------ 
+
+    
     def display_figure(self, X):
         """display the ellipe of the multivariate Guassian distributions
 
@@ -248,7 +246,7 @@ class VariationalGaussianMixture():
 
 
 
-    # ------------ fit ------------ 
+ 
     def fit(self, X):
         """fits a mixture model to provided data (X)
 
